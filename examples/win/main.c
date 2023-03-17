@@ -9,4 +9,6 @@ int main()
     func_handle func = (func_handle)hw_dlsym(dll, "test");
 
     func();
+
+    hw_dlclose(dll);
 }
