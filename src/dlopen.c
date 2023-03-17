@@ -30,3 +30,13 @@ struct hotwire_dll_t hw_dlopen(const char *file, int flags) {
 
   return dll;
 }
+
+void* hw_dlsym(struct hotwire_dll_t dll, const char* symbol){
+  #if defined(_WIN32)
+    return GetProcAddress(dll.dll_handle, symbol);
+  #endif
+
+  #if defined(__linux) || defined(__APPLE__)
+    return dlsym(dll.dll_handle, symbol);
+  #endif
+}
