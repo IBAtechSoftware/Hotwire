@@ -1,0 +1,7 @@
+grbc_want_version("1.0")
+
+grbc_ext("GRBC_EXT_profiles")
+
+require("init")
+
+grbc_build("ninja")
