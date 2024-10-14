@@ -6,7 +6,7 @@ local hotwire_lib = grbc_library(LibraryConfig.new({
 		grbc_file("src/dlopen.c")
 	},
 
-	lib_type = LibraryType.Static,
+	lib_type = LibraryType.Shared,
 	requirements = {},
 	compile_flags = {},
 	linker_flags = {},
